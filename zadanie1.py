@@ -16,7 +16,7 @@ print("Tablica t = ", t[0], t[1], t[2])
 
 # ZADANIE 1
 # Wypisać 5 funkcji predefiniowanych
-
+print("--ZADANIE 1--")
 # pierwsza funkcja predefiniowana (biblioteka math)
 print("Pierwiastek z c = ", math.sqrt(c))
 # druga funkcja predefiniowana (biblioteka random)
@@ -27,12 +27,3 @@ print("Tangens 90 stopni = ", math.tan(90))
 print("Wielkość listy t =", len(t))
 # piąta funkcja predefiniowana
 print("Spis właściwości i metod:", dir())
-
-# ZADANIE 2
-# Funkcja nazwa + działanie + wywołać ją
-
-# ZADANIE 3
-# Funkcje ze zmiennymi funkcyjnymi i globalnymi
-
-# ZADANIE 4
-# Przekazanie funkcji jako argument
