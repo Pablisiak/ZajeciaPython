@@ -1,21 +1,13 @@
-# ZADANIE 6
-# Korzystając z filter() wyodrębnij z danej listy słowa zaczynające się na "a"
-# Użyj map() do przekształcenia listy liczb w listę ich kwadratów
-print("--ZADANIE 6--")
-lista = ["ananas","agrest","banan","mleko","fryteczki","aaaaaaaaaAAAAAAAAAAAAAAA"]
-def Filtrowanie(x):
-    if x[0] == "a":
-        return True
-    else:
-        return False
-przefiltrowane = filter(Filtrowanie, lista)
+from functools import reduce
 
-for x in przefiltrowane:
-    print(x)
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-def kwadraty(x):
-    return x*x
+max_number = reduce(lambda x, y: x if x > y else y, numbers)
+print("Największa liczba:", max_number)
 
-liczby = [1,2,3,4]
-wynik = map(kwadraty, liczby)
-print(list(wynik))
+def calculate_average(numbers):
+    total = reduce(lambda x, y: x + y, numbers)
+    return total / len(numbers)
+
+average = calculate_average(numbers)
+print("Średnia:", average)

@@ -1,29 +1,8 @@
-# importowanie bibliotek
-import math
-import random
-
-# deklaracja zmiennych
-a = 2
-b = 3
-c = 4
-t = [5, 6, 7]
-
-# wypisanie
-print("Zmienna a = ", a)
-print("Zmienna b = ", b)
-print("Zmienna c = ", c)
-print("Tablica t = ", t[0], t[1], t[2])
-
-# ZADANIE 1
-# Wypisać 5 funkcji predefiniowanych
-print("--ZADANIE 1--")
-# pierwsza funkcja predefiniowana (biblioteka math)
-print("Pierwiastek z c = ", math.sqrt(c))
-# druga funkcja predefiniowana (biblioteka random)
-print("Losowa liczba z tablicy t = ", random.choice(t))
-# trzecia funkcja predefiniowana (biblioteka math)
-print("Tangens 90 stopni = ", math.tan(90))
-# czwarta funkcja predefiniowana
-print("Wielkość listy t =", len(t))
-# piąta funkcja predefiniowana
-print("Spis właściwości i metod:", dir())
+x = 5
+y = 3.14159
+lista = [3, 2, 1, 4, 5]
+print(type(x))  # 1 funkcja
+print(abs(x))  # 2 funkcja
+print(round(y, 2))  # 3 funkcja
+print(len(lista))  # 4 funkcja
+print(sorted(lista))  # 5 funkcja

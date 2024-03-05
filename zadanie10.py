@@ -1,21 +1,19 @@
-# ZADANIE 6
-# Korzystając z filter() wyodrębnij z danej listy słowa zaczynające się na "a"
-# Użyj map() do przekształcenia listy liczb w listę ich kwadratów
-print("--ZADANIE 6--")
-lista = ["ananas","agrest","banan","mleko","fryteczki","aaaaaaaaaAAAAAAAAAAAAAAA"]
-def Filtrowanie(x):
-    if x[0] == "a":
-        return True
-    else:
-        return False
-przefiltrowane = filter(Filtrowanie, lista)
+def fibonacci_generator():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
 
-for x in przefiltrowane:
-    print(x)
+def read_large_file(file_path):
+    with open(file_path, 'r') as file:
+        for line in file:
+            yield line.strip()
 
-def kwadraty(x):
-    return x*x
+fib_gen = fibonacci_generator()
+for _ in range(10):
+    print(next(fib_gen))
 
-liczby = [1,2,3,4]
-wynik = map(kwadraty, liczby)
-print(list(wynik))
+file_path = 'zadanie10-large_file.txt'
+lines_gen = read_large_file(file_path)
+for line in lines_gen:
+    print(line)
