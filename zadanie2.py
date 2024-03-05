@@ -1,7 +1,10 @@
-# ZADANIE 2
-# Funkcja nazwa + działanie + wywołać ją
-print("--ZADANIE 2--")
-def nazwa():
-    print("super!!")
+def make_multiplier(x):
+    def multipliter(n):
+        return x * n
 
-nazwa()
+    return multipliter
+
+
+double = make_multiplier(2)
+
+print(double(5))

@@ -1,21 +1,7 @@
-# ZADANIE 6
-# Korzystając z filter() wyodrębnij z danej listy słowa zaczynające się na "a"
-# Użyj map() do przekształcenia listy liczb w listę ich kwadratów
-print("--ZADANIE 6--")
-lista = ["ananas","agrest","banan","mleko","fryteczki","aaaaaaaaaAAAAAAAAAAAAAAA"]
-def Filtrowanie(x):
-    if x[0] == "a":
-        return True
-    else:
-        return False
-przefiltrowane = filter(Filtrowanie, lista)
+def square(x):
+    return x * x
 
-for x in przefiltrowane:
-    print(x)
+numbers = [6,7,8,9,10]
+squared_numbers = list(map(square, numbers))
 
-def kwadraty(x):
-    return x*x
-
-liczby = [1,2,3,4]
-wynik = map(kwadraty, liczby)
-print(list(wynik))
+print(squared_numbers)
