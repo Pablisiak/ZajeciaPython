@@ -1,23 +1,17 @@
-lista = ["ananas", "agrest", "banan", "mleko", "fryteczki", "aaaaaaaaaAAAAAAAAAAAAAAA"]
+def safe_function(func):
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            print(f"Error: {e}")
+            return None
+    return wrapper
 
 
-def filtrowanie(x):
-    if x[0] == "a":
-        return True
-    else:
-        return False
+@safe_function
+def divide(a, b):
+    return a / b
 
 
-przefiltrowane = filter(filtrowanie, lista)
-
-for x in przefiltrowane:
-    print(x)
-
-
-def kwadraty(x):
-    return x*x
-
-
-liczby = [1, 2, 3, 4]
-wynik = map(kwadraty, liczby)
-print(list(wynik))
+print(divide(10, 2))
+print(divide(10, 0))
